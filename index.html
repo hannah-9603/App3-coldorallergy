@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The goal of the code is to design a simple app that determines the probability that a person is experiencing a cold or allergies.
  
 Known Issues:
-The numerical value for the results are not showing up.
+The allergy and cold percents for the results were not showing up, and two of my lines of code for the results were misplaced before. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -52,11 +52,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function resultsPercent ()
 	{
-	var newallergy_count = (allergy_count/4)*100;
-	var newcold_count = (cold_count/4)*100;	
-	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is allergies =" + newallergy_count + "<br> Probability it is a cold =" + newcold_count; 
-	
+	var allergyPercent = (allergy_count/4)*100; //I defined a new variable to calculate the allergy percent.//	
+	var coldPercent = (cold_count/4)*100;	//I defined a new variable to calculate the cold percent.//	
+	var resultText = document.getElementById("results"); 
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //This code gets the results posted on the same page as the results.//
 	
 	}
 
@@ -161,8 +160,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 	<p id="results"></p>
-	 
 	<a href="#five" onclick="resultsPercent();" class="w3-btn w3-black"> Click for results! </a>
+<!-- I created the button for the results button here. -->	
 		
 </div>
 
