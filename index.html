@@ -44,13 +44,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-	    allergyPercent = 25*allergy_count;
+	    allergyPercent = allergyPercent*25*allergy_count;
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
-	    coldPercent = 25*cold_count;
+	    coldPercent = allergyPercent*25*cold_count;
         }
 
 
