@@ -50,14 +50,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
         }
 	
-	function allergyPercent (){
-		allergy_count = allergy_count + 1;		
-		25*allergy_count;
-	}
-
-	function coldPercent (){
-		newcold_count = cold_count + 1;		
-		25*cold_count;
+	function resultsPercent ()
+	{
+	var newallergy_count = (allergy_count/4)*100;
+	var newcold_count = (cold_count/4)*100;	
+	var resultText = document.getElementById("results");
+	resultText.innerHTML = "Probability it is allergies =" + newallergy_count + "<br> Probability it is a cold =" + newcold_count; 
+	
+	
 	}
 
   </script>
@@ -148,8 +148,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-	<a href="#five" onclick="allergyAdd();" onclick="allergyProp();" onclick="allergyPercent();" class="w3-btn w3-black"> Yes </a>
-	<a href="#five" onclick="coldAdd();" onclick="coldProp();" onclick="coldPercent();" class="w3-btn w3-black"> No </a>
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 <!-- I created a new division to test question 4.  -->
@@ -158,12 +158,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h2>Results</h2>
 	</div>
+
 	<div id="content" class="w3-container">
 	 <p id="results"></p>
-	 <script>
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergy_count + "<br> Probability it is a cold =" + cold_count;
-	</script>	
+	 
+	<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click for results! </a>
+		
 </div>
 
 <!-- I am attempting to show the results.  -->
