@@ -38,31 +38,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-	var allergyPercent = 0;
-	var coldPercent = 0;
+	var allergyPercent = 1;
+	var coldPercent = 1;
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
+	    allergyPercent = 25*allergy_count;
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
+	    coldPercent = 25*cold_count;
         }
 
-	function allergyProp(){
-	
-		function allergyAdd(){
-            allergy_count = allergy_count + 1;}
-            allergyPercent = 25*allergy_count;
-        }
 
-	function coldProp(){
-		function coldAdd(){
-            allergy_count = allergy_count + 1;}
-            coldPercent = 25*cold_count;
-        }
   </script>
 
 
