@@ -45,14 +45,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
 	    num1 = document.getElementById("allergy_count").value;
-	    allergyPercent = 25*num1;
+	    allergyPercent =  document.getElementById("allergy_count").innerHTML = num1*25;
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
 	     num2 = document.getElementById("cold_count").value;
-	     coldPercent = 25*num2;
+	     allergyPercent =  document.getElementById("cold_count").innerHTML = num2*25;
         }
 
 
