@@ -144,11 +144,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <!-- I created a new division to test question 4.  -->
 <!-- I created the allergyAdd and coldAdd functions for the other 3 questions.  -->
-
-	<p id="results"> 
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h2>Results</h2>
+	</div>
+	<div id="content" class="w3-container">
+		<p id="results"> 
+	var allergyPercent = allergy_count;
+	var coldPercent = cold_count;
 	var resultText = document.getElementById("results");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;</p>.
-	
+</div>
 
 <!-- I am attempting to show the results.  -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
