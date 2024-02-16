@@ -51,6 +51,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 	
         }
+	function allergyPercent (){
+		25*allergy_count;
+	}
+	function coldPercent (){
+		25*cold_count;
+	}
 
 
   </script>
@@ -141,8 +147,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-	<a href="#five" onclick="allergyAdd();" onclick="allergyProp();" class="w3-btn w3-black"> Yes </a>
-	<a href="#five" onclick="coldAdd();" onclick="coldProp();" class="w3-btn w3-black"> No </a>
+	<a href="#five" onclick="allergyAdd();" onclick="allergyProp();" onclick="allergyPercent();" class="w3-btn w3-black"> Yes </a>
+	<a href="#five" onclick="coldAdd();" onclick="coldProp();" onclick="coldPercent();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 <!-- I created a new division to test question 4.  -->
@@ -155,7 +161,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	 <p id="results"></p>
 	 <script>
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + 25*allergy_count + "<br> Probability it is a cold =" + 25*cold_count;
+		resultText.innerHTML = "Probability it is allergies =" + allergy_count + "<br> Probability it is a cold =" + cold_count;
 	</script>	
 </div>
 
