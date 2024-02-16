@@ -52,11 +52,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
 	function allergyProp(){
-            allergyPercent = 100*(allergy_count)/(allergy_count + cold_count);
+            allergyPercent = allergy_count + cold_count;
         }
 
 	function coldProp(){
-            coldPercent = 100*(cold_count)/(allergy_count + cold_count);
+            coldPercent = allergy_count + cold_count;
         }
   </script>
 
