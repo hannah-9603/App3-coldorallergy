@@ -36,28 +36,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0;//a variable that counts answers correlating to allergies
+        var cold_count = 0;//a variable that counts answers correlating to cold
 
         function allergyAdd(){
        		allergy_count = allergy_count + 1;
 		alert(allergy_count);
 
         }
+		//function that calculates the number of answers correlating to allergies
 
         function coldAdd(){
         	cold_count = cold_count + 1;
 	
         }
+		//function that calculates the number of answers correlating to cold 
 	
 	function resultsPercent ()
 	{
-	var allergyPercent = (allergy_count/4)*100; //I defined a new variable to calculate the allergy percent.//	
-	var coldPercent = (cold_count/4)*100;	//I defined a new variable to calculate the cold percent.//	
-	var resultText = document.getElementById("results"); 
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //This code gets the results posted on the same page as the results.//
+		var allergyPercent = (allergy_count/4)*100; //I defined a new variable to calculate the allergy percent.//	
+		var coldPercent = (cold_count/4)*100;	//I defined a new variable to calculate the cold percent.//	
+		var resultText = document.getElementById("results"); 
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //This code gets the results posted on the same page as the results.//
 	
 	}
+		//function that calculates and outputs the probability that the symptoms are allergies or a cold
 
   </script>
 
@@ -109,6 +112,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- I edited the question here.  -->
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+<!-- This is page one, and clicking either "yes" or "no" button takes you to page two.  -->
 <!-- I created the "yes" and "no" buttons here.  -->
 <!-- I created the allergyAdd and coldAdd functions.  -->
 		
@@ -124,6 +128,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a fever?</p>
 	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+<!-- This is page two, and clicking either "yes" or "no" button takes you to page three.  -->
+
+		
 	</div>
 </div>
 
@@ -136,6 +143,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+<!-- This is page three, and clicking either "yes" or "no" button takes you to page four.  -->
 	</div>
 </div>
 <!-- I created a new division to test question 3.  -->
@@ -149,6 +157,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+<!-- This is page four, and clicking either "yes" or "no" button takes you to the results page.  -->
 	</div>
 </div>
 <!-- I created a new division to test question 4.  -->
@@ -162,11 +171,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p id="results"></p>
 	<a href="#five" onclick="resultsPercent();" class="w3-btn w3-black"> Click for results! </a>
 <!-- I created the button for the results button here. -->	
+<!-- This is the last page, and clicking "Click for results" button ouputs the two probabilities for having either allergies or cold.  -->
 		
 </div>
 
 
-<!-- I am attempting to show the results.  -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
